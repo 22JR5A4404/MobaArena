@@ -18,7 +18,7 @@ async function setSession(token: string) {
   cookieStore.set(SESSION_COOKIE, token, {
     httpOnly: true,
     secure: true,
-    sameSite: "strict",
+    sameSite: "lax",
     path: "/",
     maxAge: 60 * 60 * 24 * 7,
   });

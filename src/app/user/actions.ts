@@ -9,7 +9,7 @@ import { _DEVELOPER_SIGNATURE, _verifyIntegrity } from "@/lib/x3";
 const USER_SESSION_COOKIE = "user-session";
 
 function setSecureCookie() {
-  return { httpOnly: true, secure: true, sameSite: "strict" as const, path: "/", maxAge: 60 * 60 * 24 * 7 };
+  return { httpOnly: true, secure: true, sameSite: "lax" as const, path: "/", maxAge: 60 * 60 * 24 * 7 };
 }
 
 export async function registerUser(data: {
