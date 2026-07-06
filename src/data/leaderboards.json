@@ -1,0 +1,10 @@
+[
+  { "rank": 1, "teamId": "nova", "teamName": "Nova Esports", "teamTag": "NOVA", "game": "freefire", "rating": 1850, "wins": 42, "losses": 8, "winRate": 84.0, "streak": "W12" },
+  { "rank": 2, "teamId": "cryp", "teamName": "CrypStorm", "teamTag": "CRYPS", "game": "freefire", "rating": 1780, "wins": 38, "losses": 12, "winRate": 76.0, "streak": "W5" },
+  { "rank": 3, "teamId": "tiger", "teamName": "Tiger Force", "teamTag": "TIGER", "game": "pubg", "rating": 1720, "wins": 30, "losses": 10, "winRate": 75.0, "streak": "W8" },
+  { "rank": 4, "teamId": "wolf", "teamName": "Wolf Pack", "teamTag": "WOLF", "game": "pubg", "rating": 1700, "wins": 32, "losses": 12, "winRate": 72.7, "streak": "W3" },
+  { "rank": 5, "teamId": "flux", "teamName": "Flux Force", "teamTag": "FLUX", "game": "freefire", "rating": 1680, "wins": 36, "losses": 14, "winRate": 72.0, "streak": "L1" },
+  { "rank": 6, "teamId": "thunder", "teamName": "Thunder Wolves", "teamTag": "THUN", "game": "freefire", "rating": 1650, "wins": 35, "losses": 15, "winRate": 70.0, "streak": "W2" },
+  { "rank": 7, "teamId": "ghost", "teamName": "Ghost Squad", "teamTag": "GHOST", "game": "cod", "rating": 1580, "wins": 28, "losses": 12, "winRate": 70.0, "streak": "W4" },
+  { "rank": 8, "teamId": "phantom", "teamName": "Phantom Kings", "teamTag": "PHANT", "game": "cod", "rating": 1540, "wins": 26, "losses": 14, "winRate": 65.0, "streak": "L2" }
+]

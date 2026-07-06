@@ -1,0 +1,154 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Tournament {
+  id                   String   @id
+  name                 String
+  game                 String
+  format               String
+  status               String
+  prizePool            String   @default("")
+  startDate            String
+  endDate              String
+  registrationDeadline String
+  maxTeams             Int      @default(16)
+  registeredTeams      Int      @default(0)
+  entryFee             String   @default("Free")
+  whatsapp             String   @default("")
+  organizer            String   @default("")
+  description          String   @default("")
+  rules                String   @default("[]")
+  bracket              String   @default("{}")
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  matches    Match[]
+  registrations Registration[]
+}
+
+model Team {
+  id          String @id
+  name        String
+  tag         String
+  logo        String @default("")
+  game        String
+  region      String
+  rating      Int    @default(0)
+  wins        Int    @default(0)
+  losses      Int    @default(0)
+  players     String @default("[]")
+  captain     String @default("")
+  founded     String @default("")
+  description String @default("")
+  color       String @default("#39ff14")
+}
+
+model Player {
+  id          String @id
+  name        String
+  realName    String
+  role        String
+  game        String
+  teamId      String?
+  rating      Int    @default(0)
+  champion    String?
+  stats       String @default("{}")
+}
+
+model Match {
+  id            String @id
+  tournamentId  String
+  tournamentName String
+  game          String
+  team1         String
+  team2         String
+  team1Score    Int?
+  team2Score    Int?
+  status        String
+  date          String
+  time          String
+  streamUrl     String?
+  patch         String?
+
+  tournament Tournament @relation(fields: [tournamentId], references: [id])
+}
+
+model Leaderboard {
+  id       String @id @default("lb-default")
+  rank     Int
+  teamId   String
+  teamName String
+  teamTag  String
+  game     String
+  rating   Int
+  wins     Int
+  losses   Int
+  winRate  Float
+  streak   String
+}
+
+model Admin {
+  id           String @id @default("admin-1")
+  username     String @unique
+  passwordHash String
+}
+
+model Registration {
+  id           String   @id @default(cuid())
+  tournamentId String
+  userId       String
+  teamName     String   @default("")
+  teamTag      String   @default("")
+  teamColor    String   @default("#39ff14")
+  playerName   String
+  playerEmail  String
+  gameName     String   @default("")
+  status       String   @default("pending")
+  createdAt    DateTime @default(now())
+
+  tournament Tournament @relation(fields: [tournamentId], references: [id])
+  user       User       @relation(fields: [userId], references: [id])
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  game         String   @default("freefire")
+  bio          String   @default("")
+  favoriteGame String   @default("")
+  isBanned     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  registrations Registration[]
+  messages      Message[]
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  userId    String
+  subject   String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model ResetToken {
+  id        String   @id @default(cuid())
+  email     String
+  type      String
+  token     String   @unique
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

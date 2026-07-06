@@ -1,0 +1,110 @@
+[
+  {
+    "id": "ff-worlds-2026",
+    "name": "Free Fire World Championship 2026",
+    "game": "freefire",
+    "format": "double-elimination",
+    "status": "ongoing",
+    "prizePool": "$2,000,000",
+    "startDate": "2026-09-01",
+    "endDate": "2026-11-15",
+    "registrationDeadline": "2026-08-15",
+    "maxTeams": 24,
+    "registeredTeams": 24,
+    "entryFee": "Free",
+    "whatsapp": "+1234567890",
+    "organizer": "Garena",
+    "description": "The biggest Free Fire tournament of the year. 24 teams from across the globe compete for the World Champion title.",
+    "rules": ["Standard competitive ruleset", "Best of 3 until semifinals", "Grand finals are Best of 5", "Garena approved roster changes only"],
+    "bracket": {
+      "rounds": [
+        {
+          "name": "Quarterfinals",
+          "matches": [
+            { "team1": "nova", "team2": "cryp", "score1": 3, "score2": 1, "winner": "nova" },
+            { "team1": "thunder", "team2": "flux", "score1": 3, "score2": 0, "winner": "thunder" },
+            { "team1": "nova", "team2": "thunder", "score1": null, "score2": null, "winner": null }
+          ]
+        },
+        {
+          "name": "Grand Final",
+          "matches": [
+            { "team1": null, "team2": null, "score1": null, "score2": null, "winner": null }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "pubg-pgc-2026",
+    "name": "PUBG Global Championship 2026",
+    "game": "pubg",
+    "format": "double-elimination",
+    "status": "registration",
+    "prizePool": "$3,000,000",
+    "startDate": "2026-07-20",
+    "endDate": "2026-08-05",
+    "registrationDeadline": "2026-07-10",
+    "maxTeams": 16,
+    "registeredTeams": 12,
+    "entryFee": "$25",
+    "whatsapp": "+0987654321",
+    "organizer": "Krafton",
+    "description": "The premier PUBG tournament. Top squads battle it out for the global crown.",
+    "rules": ["Squad format only", "Standard competitive settings", "Anti-cheat required"]
+  },
+  {
+    "id": "cod-champs-2026",
+    "name": "COD Champions 2026",
+    "game": "cod",
+    "format": "round-robin",
+    "status": "upcoming",
+    "prizePool": "$500,000",
+    "startDate": "2026-08-10",
+    "endDate": "2026-09-30",
+    "registrationDeadline": "2026-08-01",
+    "maxTeams": 8,
+    "registeredTeams": 6,
+    "entryFee": "$15",
+    "whatsapp": "+1122334455",
+    "organizer": "Activision",
+    "description": "The premier Call of Duty league returns. Round robin format with playoffs.",
+    "rules": ["Best of 1 round robin", "Top 4 advance to playoffs", "Tiebreaker rules apply"]
+  },
+  {
+    "id": "cod-cdl-spring",
+    "name": "COD League Spring 2026",
+    "game": "cod",
+    "format": "round-robin",
+    "status": "completed",
+    "prizePool": "$300,000",
+    "startDate": "2026-01-15",
+    "endDate": "2026-04-20",
+    "registrationDeadline": "2025-12-20",
+    "maxTeams": 10,
+    "registeredTeams": 10,
+    "entryFee": "Free",
+    "whatsapp": "+5566778899",
+    "organizer": "Activision",
+    "description": "The COD League spring split. 10 teams battle for the championship.",
+    "rules": ["Standard CDL rules", "Double round robin", "Top 6 playoffs"]
+  },
+  {
+    "id": "pubg-pgi-qual",
+    "name": "PUBG Global Invitational Qualifiers",
+    "game": "pubg",
+    "format": "single-elimination",
+    "status": "completed",
+    "prizePool": "$100,000",
+    "startDate": "2026-06-01",
+    "endDate": "2026-06-15",
+    "registrationDeadline": "2026-05-25",
+    "maxTeams": 16,
+    "registeredTeams": 16,
+    "entryFee": "$10",
+    "whatsapp": "+9988776655",
+    "organizer": "Krafton",
+    "description": "Regional qualifiers for the PUBG Global Invitational. Only the best will earn their spot.",
+    "rules": ["Best of 3", "Grand finals Best of 5"]
+  }
+]
